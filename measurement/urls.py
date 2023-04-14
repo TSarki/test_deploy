@@ -1,5 +1,6 @@
 from django.urls import path
-from measurement.views import sensor_view_info, sensors, sensor_change, sensor_create, measure_create
+from measurement.views import (sensor_view_info, sensors,
+                               sensor_change, sensor_create, measure_create)
 
 urlpatterns = [
     path('sensor_change/<pk>/', sensor_change.as_view()),
