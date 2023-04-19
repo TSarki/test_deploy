@@ -66,11 +66,11 @@ jobs:
           host: ${{secrets.HOST_NAME }}
           username: ${{secrets.HOST_USER }}
           password: ${{secrets.HOST_PASSWORD }}
-          script: |
-            cd /home/sarki/test_deploy
-            git pull origin main
-            source env/bin/activate
-            python manage.py migrate
-            sudo systemctl restart gunicorn
+          script: expect /home/sarki/test_deploy/deploy.exp
+            # cd /home/sarki/test_deploy
+            # git pull origin main
+            # source env/bin/activate
+            # python manage.py migrate
+            # sudo systemctl restart gunicorn
 
       
